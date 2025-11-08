@@ -12,54 +12,16 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-
 ## URL ENDPOINTS
 
-http://localhost:4200/
-http://localhost:4200/integration-status
-http://localhost:4200/github-data
+http://localhost:4200/  
+http://localhost:4200/integration-status  
+http://localhost:4200/github-data  
+
+## SCREENSHOTS
+
+![2025-11-08 02_24_07-Frontend3 — Mozilla Firefox](https://github.com/user-attachments/assets/56497a29-aa80-40e4-b2fa-685d9dbd1465)
+![2025-11-08 02_24_10-Frontend3 — Mozilla Firefox](https://github.com/user-attachments/assets/5729970c-5da0-430c-bbe0-3ddf321070ca)
+![2025-11-08 02_24_59-Frontend3 — Mozilla Firefox](https://github.com/user-attachments/assets/c0c3e68e-1217-474d-be11-6d74b32bf2c0)
+![2025-11-08 02_25_09-Frontend3 — Mozilla Firefox](https://github.com/user-attachments/assets/aea09b3e-6ed6-4c84-9b4f-f959b38ee2ef)
+![2025-11-08 02_25_19-Frontend3 — Mozilla Firefox](https://github.com/user-attachments/assets/7948634c-df62-4b7b-bfc4-8d8f36bcca3d)
