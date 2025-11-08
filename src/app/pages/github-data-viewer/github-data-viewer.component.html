@@ -1,0 +1,42 @@
+<div class="p-6">
+    <h2 class="text-2xl font-semibold mb-4">GitHub Data Viewer</h2>
+
+    <mat-form-field appearance="outline" class="w-64">
+        <mat-label>Select Collection</mat-label>
+        <mat-select [(ngModel)]="selectedCollection" (selectionChange)="loadData()">
+            <mat-option *ngFor="let col of collections" [value]="col">
+                {{ col }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    @if (isLoading) {
+    <div class="mt-6">
+        <mat-spinner diameter="40"></mat-spinner>
+    </div>
+    }
+
+    @if (errorMessage) {
+    <p class="text-red-500 mt-4">{{ errorMessage }}</p>
+    }
+
+    @if (!isLoading && !errorMessage && rowData.length) {
+    <mat-form-field appearance="outline" style="width: 100%; margin-bottom: 12px;">
+        <mat-label>Search</mat-label>
+        <input matInput [(ngModel)]="searchText" (ngModelChange)="onQuickFilter(searchText)">
+    </mat-form-field>
+
+    <div class="mt-6">
+        <ag-grid-angular style="width: 100%; height: 600px;" class="ag-theme-alpine" [rowData]="rowData"
+            [columnDefs]="columnDefs" [defaultColDef]="{ sortable: true, filter: true, resizable: true }"
+            (gridReady)="onGridReady($event)">
+        </ag-grid-angular>
+    </div>
+    }
+
+    @if (!isLoading && !errorMessage && !rowData.length) {
+    <p class="mt-6 text-gray-600">
+        Select a collection to view its data.
+    </p>
+    }
+</div>

@@ -10,6 +10,8 @@
 /node_modules
 npm-debug.log
 yarn-error.log
+dist/
+out-tsc/
 
 # IDEs and editors
 .idea/
@@ -40,3 +42,11 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Node dependencies
+node_modules/
+dist/
+out-tsc/
+
+# Environment variables
+.env

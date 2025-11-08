@@ -1,0 +1,41 @@
+<mat-card class="integration-card">
+    <mat-card-header>
+        <mat-card-title>GitHub Integration</mat-card-title>
+        <mat-card-subtitle>Connect your account to fetch data from GitHub.</mat-card-subtitle>
+        <mat-card-subtitle>After connecting your account, click on the Re-sync button to pull the
+            data.</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+        @if (!isConnected) {
+        <p>You're not connected to GitHub yet.</p>
+        <button mat-raised-button color="primary" (click)="connectGithub()">
+            Connect to GitHub
+        </button>
+        } @else {
+        <p>You are connected</p>
+        <div class="connected">
+            <mat-icon color="primary">check_circle</mat-icon>
+            <div>
+                <p><strong>Connected</strong> on {{ connectionDate | date:'medium' }}</p>
+                @if (user) {
+                <img [src]="user.avatar_url" alt="avatar" width="40" height="40"
+                    style="border-radius:50%; margin-right:8px;">
+                <span>{{ user.login }}</span>
+                }
+            </div>
+        </div>
+
+        <div class="actions">
+            <button mat-flat-button color="accent" (click)="resyncIntegration()">Re-sync</button>
+            <button mat-stroked-button color="warn" (click)="removeIntegration()">Remove Integration</button>
+        </div>
+
+        @if (isSyncing) {
+        <div class="mt-6">
+            <mat-spinner diameter="40"></mat-spinner>
+        </div>
+        }
+        }
+    </mat-card-content>
+</mat-card>

@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink } from '@angular/router';
+import { MaterialModule } from "../app/material.module";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, MaterialModule, RouterLink],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
-  title = 'frontend-3';
+  constructor(private router: Router) { }
+
+  title = 'GitHub Intergration Dashboard - Demo';
 }
